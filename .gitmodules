@@ -1,0 +1,4 @@
+[submodule "themes/hugo-theme-stack"]
+	path = themes/hugo-theme-stack
+	url = https://gitee.com/mirrors_CaiJimmy/hugo-theme-stack
+	tag = v3.11.0

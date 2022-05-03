@@ -1,15 +1,33 @@
-### Hugo ###
-# Generated files by hugo
-# /public/
-/resources/_gen/
-# /themes/
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
 
-# Executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
+# Folders
+_obj
+_test
 
-# OSX
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+
+public
+themes
+resources
+
+assets/jsconfig.json
 .DS_Store
-.idea
 *.iml
+.idea
+.hugo_build.lock
