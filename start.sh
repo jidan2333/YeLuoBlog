@@ -18,7 +18,8 @@ git clean -dfx
 echo "rebuilt blog html."
 sed -i "s/localhost/$HOST/g" config.yml
 sed -i "s/localhost/$HOST/g" nginx/conf.d/80.conf
-hugo
+mkdir -p cache
+hugo --cacheDir=`pwd`/cache
 
 echo "rebuilt nginx directory."
 mkdir -p nginx/html
