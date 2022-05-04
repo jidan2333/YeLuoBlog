@@ -15,6 +15,9 @@ echo "clean last build."
 git reset --hard
 git clean -dfx
 
+echo "pull latest code from github"
+git pull
+
 echo "rebuilt blog html."
 sed -i "s/localhost/$HOST/g" config.yml
 sed -i "s/localhost/$HOST/g" nginx/conf.d/80.conf
