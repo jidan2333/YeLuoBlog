@@ -1,7 +1,7 @@
 HOST=$1
 
 echo "stop running blog..."
-sudo docker rm -f `docker ps | grep blog | awk '{print $1}'`
+sudo docker ps -a | grep blog | awk '{print $1}' | xargs sudo docker rm -f
 
 echo "clean last build."
 git reset --hard
