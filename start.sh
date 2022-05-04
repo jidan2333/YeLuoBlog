@@ -1,3 +1,4 @@
+echo "input args num:$#, args:$1"
 if [ $# != 1 ]; then
   echo "usage:"
   echo "    ./start.sh {host_ip}"
