@@ -2,7 +2,7 @@
 #  imports:
 #    - path: gitee.com/mirrors_CaiJimmy/hugo-theme-stack
 #      disable: false
-baseurl: https://example.com
+baseurl: http://localhost
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
