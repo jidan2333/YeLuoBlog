@@ -1,4 +1,4 @@
-echo "input args num:$#, args:$1"
+echo "now is `date`"
 if [ $# != 1 ]; then
   echo "usage:"
   echo "    ./start.sh {host_ip}"
