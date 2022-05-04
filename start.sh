@@ -1,4 +1,4 @@
-if [ $# != 2 ]; then
+if [ $# != 1 ]; then
   echo "usage:"
   echo "    ./start.sh {host_ip}"
   exit 1
