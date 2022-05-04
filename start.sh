@@ -1,4 +1,11 @@
+if [ $# != 2 ]; then
+  echo "usage:"
+  echo "    ./start.sh {host_ip}"
+  exit 1
+fi
+
 HOST=$1
+echo "listen IP/DomainName is $HOST."
 
 echo "stop running blog..."
 sudo docker ps -a | grep blog | awk '{print $1}' | xargs sudo docker rm -f
