@@ -9,6 +9,7 @@ git clean -dfx
 
 echo "rebuilt blog html."
 sed -i "s/localhost/$HOST/g" config.yml
+sed -i "s/localhost/$HOST/g" nginx/conf.d/80.conf
 hugo
 
 echo "rebuilt nginx directory."
