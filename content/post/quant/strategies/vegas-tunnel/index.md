@@ -46,13 +46,51 @@ Vegas隧道交易法主要用到5条EMA（ExponentialMovingAverage）均线：
 
 ## 实操分析
 
+### V1.0 上穿做多，下穿止损
+
 ​	根据隧道交易法的原话，
 
-​	**等待市场进人“隧道”区域。当它突破隧道上轨时，你做多；**
+**等待市场进人“隧道”区域。当它突破隧道上轨时，你做多；**
 
-​	**当它突破隧道下轨时，你做空。**
+**当它突破隧道下轨时，你做空。**
 
-​	**平仓和反转位置放置在隧道的另外一边**
+**平仓和反转位置放置在隧道的另外一边**
 
-​	我们可以初步给出1.0版本的开仓和平仓策略，我们首先只考虑做多头头寸，简化概念的理念。那么可以得到以下操作原则：
+我们可以初步给出1.0版本的开仓和平仓策略，我们首先只考虑做多头头寸，简化概念的理解。那么可以得到以下操作原则：
 
+* 突破中短期通道（144、169）上轨时，做多，止损点为通道下轨
+* 止盈377点
+
+参数配置：
+
+| 币对     | 起始资金 | 单次买入 | Timeframe | Start_time | End_time | 止盈 |
+| -------- | -------- | -------- | --------- | ---------- | -------- | ---- |
+| BTC-USDT | 10000U   | 0.2BTC   | 1H        | 2022.3.1   | 2022.5.9 | +377 |
+
+主要策略实现：
+
+```python
+    def next(self):
+        if self.position.size == 0:
+            # 取上轨作为买入触发点
+            if self.ema144 > self.ema169 and self._12_to_144 > 0:
+                self.buy()
+            if self.ema144 < self.ema169 and self._12_to_169 > 0:
+                self.buy()
+
+        if self.position.size > 0:
+            # 止盈
+            if self.data.close >= self.position.price + self.p.stoplimit:
+                self.sell()
+            # 止损
+            if self.ema144 > self.ema169 and self._12_to_169 < 0:
+                self.sell()
+            if self.ema144 < self.ema169 and self._12_to_144 < 0:
+                self.sell()
+```
+
+回测结果：
+
+![Figure_0](/Users/zhongwenwang/Documents/YeLuoBlog/content/post/quant/strategies/vegas-tunnel/Figure_0.png)
+
+> 自2022年4月以来明显大熊市，回测结果能盈利就不错了。
