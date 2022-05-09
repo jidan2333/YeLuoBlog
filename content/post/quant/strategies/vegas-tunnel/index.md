@@ -91,6 +91,6 @@ Vegas隧道交易法主要用到5条EMA（ExponentialMovingAverage）均线：
 
 回测结果：
 
-![Figure_0](/Users/zhongwenwang/Documents/YeLuoBlog/content/post/quant/strategies/vegas-tunnel/Figure_0.png)
+![Figure_0](Figure_0.png)
 
 > 自2022年4月以来明显大熊市，回测结果能盈利就不错了。
