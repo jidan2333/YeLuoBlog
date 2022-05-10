@@ -1,13 +1,13 @@
 ---
 title: 关于
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+description: 我们所过的每一个平凡的日常，也许就是连续不断的奇迹
+date: '2022-05-10'
 aliases:
   - about-us
   - about-hugo
   - contact
 license: CC BY-NC-ND
-lastmod: '2020-10-09'
+lastmod: '2022-05-10'
 menu:
     main: 
         weight: -50
@@ -15,20 +15,40 @@ menu:
             icon: user
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## 关于我
 
-Hugo makes use of a variety of open source projects including:
+​	Hi~
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+​	很高兴在此遇见你。
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+​	很多人在介绍自己的时候喜欢说自己跨过几座山看过几片海，听过长者的哪些教诲，或是有什么拿手绝活以及值得称赞的作品。对一名技术宅而言，我偶尔也会炫耀自己与众不同的经历或是某方面斐然的成绩，也算的上火树银花一身骄傲。
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+​	只是，仔细想想，这些可有可无的东西并不是真实的我，或者说，不是我最喜欢的样子……
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+​	记得去年被上司骂惨的晚上，饿着肚子躺在床上，看到《深夜食堂》里的“茶泡饭三姐妹”破镜重圆后，情不自禁地笑着抹眼泪——哈哈，这大概才是我最真实的样子：
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+​	是直面操蛋人生的上班族；
+
+​	是在一望无垠的戈壁公路上引吭高歌的路人；
+
+​	是在暴雨滂沱的天幕下，凭雨滴打湿面庞的小男孩；
+
+​	是在摩尔定律驱使下，跟随变革与进化的极客；
+
+​	是在理性与情感的交界巅峰，左右追寻自我的流浪者。
+
+## 我的研究方向
+
+​	目前在某互联网公司从事后端开发（Java/Python/C）、项目管理。
+
+​	但显然，这些对 `加班`“从善如流”的公司，显然不是追求自由与个性的我所向往的生活和目标。
+
+​	在朋友的引路下，从接触数字货币到量化交易，我开始对概率和趋势分析产生了浓厚的兴趣。在两年来断断续续的自学和实操下，决定正式踏入量化交易这个行业，希望以一个程序员的视角来分析、搭建自由职业者所需的量化框架，以及在中短期（偏高频）行情下的趋势策略分析。
+
+​	`我没有导师，没有系统的学习资料`，一切都在Google和Youtube中乱搜，一切都在摸索。。。
+
+​	因此这个博客网站就诞生了，强逼自己系统地整理知识地图，并定期回顾和总结，也希望跟量化交易领域的网友们有更多交流，在思维碰撞中共同进步。
+
+## 如何联系我
+
+* EMAIL: 137643599@qq.com
