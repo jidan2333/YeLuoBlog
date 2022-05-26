@@ -1,13 +1,14 @@
 echo "now is `date`"
-if [ $# != 3 ]; then
+if [ $# != 4 ]; then
   echo "usage:"
   echo "    ./start.sh {host_ip}"
   exit 1
 fi
 
 HOST=$1
-CRT_FILE_NAME=$2
-KEY_FILE_NAME=$3
+CERT_PATH=$2
+CRT_FILE_NAME=$3
+KEY_FILE_NAME=$4
 echo "listen IP/DomainName is $HOST."
 
 echo "stop running blog..."
@@ -16,6 +17,15 @@ sudo docker ps -a | grep blog | awk '{print $1}' | xargs sudo docker rm -f
 echo "clean last build."
 git reset --hard
 git clean -dfx
+
+echo "make cert directory"
+mkdir -p cert/
+
+echo "copy crt file"
+cp $CERT_PATH/$CRT_FILE_NAME cert/
+
+echo "copy key file"
+cp $CERT_PATH/$KEY_FILE_NAME cert/
 
 echo "pull latest code from github"
 git pull
