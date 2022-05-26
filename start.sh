@@ -48,5 +48,5 @@ echo "copy generated html resource."
 mv public/* nginx/html/
 
 echo "starting blog."
-sudo docker run -id --name=yeluo-blog -p 80:80 -v $PWD/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v $PWD/nginx/conf.d:/etc/nginx/conf.d -v $PWD/nginx/logs:/var/log/nginx -v $PWD/nginx/html:/usr/share/nginx/html -v $PWD/cert:/etc/nginx/cert  nginx
+sudo docker run -id --name=yeluo-blog -p 80:80 -p 443:443 -v $PWD/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v $PWD/nginx/conf.d:/etc/nginx/conf.d -v $PWD/nginx/logs:/var/log/nginx -v $PWD/nginx/html:/usr/share/nginx/html -v $PWD/cert:/etc/nginx/cert  nginx
 echo "start success."
