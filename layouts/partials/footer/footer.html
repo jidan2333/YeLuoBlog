@@ -5,7 +5,9 @@
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
-        {{ now.Format "2006" }} {{ .Site.Title }} <br /><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2022062807号</a>
+        {{ now.Format "2006" }} {{ .Site.Title }}
+        {{ $img := resources.Get "img/beian.png" }}
+        <br /><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004806"><img src="{{ $img.RelPermalink }}" style="float:left;"/>粤公网安备 44030702004806号</a><span> </span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2022062807号</a>
     </section>
     
     <section class="powerby">
