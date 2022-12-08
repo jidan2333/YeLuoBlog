@@ -32,7 +32,7 @@ git pull
 
 echo "rebuilt blog html."
 sed -i "s/localhost/$HOST/g" config.yml
-sed -i "s/localhost/$HOST/g" nginx/conf.d/443.conf
+sed -i "s/localhost/$HOST/g" nginx/conf.d/*.conf
 sed -i "s/ssl_demo_crt.crt/$CRT_FILE_NAME/g" nginx/conf.d/443.conf
 sed -i "s/ssl_demo_key.key/$KEY_FILE_NAME/g" nginx/conf.d/443.conf
 mkdir -p cache
